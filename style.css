@@ -45,8 +45,12 @@ header ul li {
 
 header ul li a {
     display: inline-block;
+    color: #333;
     width: 100%;
     display: flex;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
     justify-content: space-between;
     align-items: center;
 }
@@ -106,6 +110,8 @@ header ul li a {
     max-width: 340px;
 }
 
+/* Bebidas */
+
 .drinks {
     position: absolute;
     left: 50%;
@@ -130,10 +136,13 @@ header ul li a {
     max-width: 60px;
 }
 
-.socials {
+
+/* Sociais */
+
+.sociais {
     position: absolute;
     top: 50%;
-    right: 50%;
+    right: 30px;
     transform: translateY(-50%);
     display: flex;
     justify-content: center;
@@ -141,10 +150,129 @@ header ul li a {
     flex-direction: column;
 }
 
-.socials li {
+.sociais li {
     list-style: none;
 }
 
-.socials li a {
+.sociais li a {
     display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+    filter: invert(1);
+}
+
+/* circulo */
+
+.circulo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #017143;
+    clip-path: circle(600px at right 800px); 
+}
+
+
+/* Responsivo Mobile*/
+
+@media (max-width: 991px) {
+
+    header {
+        padding: 20px;
+    }
+    
+    header .logo {
+        position: relative;
+        max-width:60px;
+    }
+    
+    header ul {
+        display: none;
+    }
+    
+    section {
+        padding: 20px 20px 120px ;
+    }
+
+    .toggle {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background: url('imagens/menu.png');
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: invert(1);
+        z-index: 11;
+    }
+
+    .toggle.active {
+        position: fixed;
+        right: 20px;
+        background-image: url('imagens/close.png');
+        background-size: 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    header ul.navigation.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: white;
+        z-index: 10;
+    }
+
+    header ul li a {
+        font-size: 1.7em;
+        font-weight: 900;
+        margin: 35px 0;
+    }
+    
+    .main {
+        flex-direction: column;
+        margin-top: 100px;
+    }
+    
+    .main .textBox h2{
+        font-size: 2.5em;
+        margin-bottom: 15px;
+    }
+    
+    .main .textBox {
+        max-width:100%;
+    }
+    
+    .main .imgBox {
+        max-width: 100%;
+        justify-content: center;
+    }
+    
+    .main .imgBox img{
+        max-width: 300px;
+    }
+    
+    .drinks li img {
+        max-width: 40px;
+    }
+    
+    .circulo {
+        clip-path:circle(400px at center bottom)
+    }
+    
+    .sociais {
+        background-color: #017143;
+        right:0;
+        width: 60px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
 }
