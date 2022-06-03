@@ -22,9 +22,7 @@
 ## Layout 
 <img src="imagens/StarBucks-leyout.png" alt="">
 
-<p align="center">
-  <img src="">
-</p>
+
 
 <div align="center">
     <img alingn="center"  width="140" src="https://github.com/LimaDev-Max/LimaDev-Max/blob/main/.github/giphy.gif?raw=true">
