@@ -18,5 +18,14 @@
 
 <p>Acesse outros Projetos <a href="https://github.com/LimaDev-Max?tab=repositories" target="_blank">aqui</a>.</p>
 
-## Layout 
 
+## Layout 
+<img src="imagens/StarBucks-leyout.png">
+
+<p align="center">
+  <img src="">
+</p>
+
+<div align="center">
+    <img alingn="center"  width="140" src="https://github.com/LimaDev-Max/LimaDev-Max/blob/main/.github/giphy.gif?raw=true">
+</div>
