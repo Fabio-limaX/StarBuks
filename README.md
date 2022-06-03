@@ -20,7 +20,7 @@
 
 
 ## Layout 
-<img src="imagens/StarBucks-leyout.png">
+<img src="imagens/StarBucks-leyout.png" alt="">
 
 <p align="center">
   <img src="">
