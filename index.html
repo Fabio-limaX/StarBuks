@@ -4,44 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starbuks</title>
+    <title>Starbucks</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="imagens/logo.png" type="image/x-icon">
 </head>
 <body>
    <section>
-       <div class="circle"></div> <!--circle-->
+       <div class="circulo"></div> <!--Circulo-->
        <header>
-           <a href="#"><img src="imagens/logo.png" alt=""></a>
-           <ul>
+           <a href="#"><img src="imagens/logo.png" class="logo"></a>
+           <div class="toggle" onclick="toggleMenu('active')"></div>
+           <ul class="navigation"> 
                <li><a href="#">Home</a></li>
                <li><a href="#">Menu</a></li>
                <li><a href="#">What's New</a></li>
-               <li><a href="#">Contact</a></li>
+               <li><a href="#">Contato</a></li>
            </ul>
        </header>
        <div class="main">
            <div class="textBox">
-               <h2>It's Not Just Coffee <br>It's <span>Starbuks</span></h2>
+               <h2>It's Not Just Coffee <br>It's <span>Starbucks</span></h2>
                <p>Lorem Ipsum é simplesmente uma simulação. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
                <a href="#">Saiba Mais</a>
            </div> <!--textbox-->
            <div class="imgBox">
-               <img src="imagens/img1.png" alt="">
+               <img src="imagens/img1.png" alt="" class="starbucks">
            </div> <!--imgBox-->
        </div> <!--main-->
 
        <ul class="drinks">
-        <li><img src="imagens/thumb1.png" alt=""></li>
-        <li><img src="imagens/thumb3.png" alt=""></li>
-        <li><img src="imagens/thumb2.png" alt=""></li>
+        <li><img src="imagens/thumb1.png"   onclick="slider('imagens/img1.png');changeColor('#017143')"></li>
+        <li><img src="imagens/thumb2 .png"   onclick="slider('imagens/img2.png');changeColor('#b1916d')"></li>
+        <li><img src="imagens/thumb3.png"   onclick="slider('imagens/img3.png');changeColor('#ff05ff')"></li>
        </ul> <!--Drinks-->
 
-       <ul class="socials">
-           <li><a href="#"><img src="imagens/facebook.png" alt=""></a></li>
-           <li><a href="#"><img src="imagens/instagram.png" alt=""></a></li>
-           <li><a href="#"><img src="imagens/twitter.png" alt=""></a></li>
+       <ul class="sociais">
+           <li><a href="#"><img src="imagens/facebook.png"  ></a></li>
+           <li><a href="#"><img src="imagens/instagram.png" ></a></li>
+           <li><a href="#"><img src="imagens/twitter.png"   ></a></li>
        </ul> <!--Socials-->
    </section>
+
+   <script>
+
+        function slider(anything) {
+            document.querySelector('.starbucks').src = anything
+        }
+
+        function changeColor(color){
+            const circle = document.querySelector('.circulo');
+            circle.style.backgroundColor = color;
+        }
+
+
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation')
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+   </script>
 </body>
 </html>
